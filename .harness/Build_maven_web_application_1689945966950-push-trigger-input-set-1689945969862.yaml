@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_maven_web_application_1689945966950-push-trigger-input-set
+  identifier: Build_maven_web_application_1689945966950pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_maven_web_application_1689945966950
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
