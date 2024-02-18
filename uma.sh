@@ -14,19 +14,23 @@ source_repos=(
 target_repo="git@github.com:satya19-wipro/kashu-test.git"
 
 #Loop through each sorce repository
+ mkdir test
+ cd test
 
 for repo in "${source_repos[@]}"; do
     #clone the source repository
-    #mkdir "$source_repos[@]"
-    git clone "$repo" #${source_repos[@]}
+    #mkdir test
+    #cd test 
+    git clone "$repo" #temp_repo #${source_repos[@]} 
+    cd "$repo"
     pwd
     git remote -v
     ls
     #change directory to the cloned repository
-    cd "$repo"
+    #cd temp_repo || exit
     #cd ${source_repos[@]} || exit
 
-    git pull origin master
+    #git pull origin master
     ls
     #Add the target repository as a remote
     
