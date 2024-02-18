@@ -31,11 +31,13 @@ for repo in "${source_repos[@]}"; do
     #Add the target repository as a remote
     
     git remote add target-url "$target_repo"
-
+    git add .
+    git commit -m "new commit"
     git fetch target-url master
+    git pull target-url master
     #git pull --ff-only
     
-    git merge target-url/master --allow-unrelated-histories
+    #git merge target-url/master --allow-unrelated-histories
     #push changes to the target repository
     
     git push target-url master
